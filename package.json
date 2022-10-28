@@ -19,6 +19,7 @@
   "homepage": "https://github.com/KalelOrbis/Portals_Introduction#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-purgecss": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.55.0"
   }
