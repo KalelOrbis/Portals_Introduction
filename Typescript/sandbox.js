@@ -22,3 +22,13 @@ ninjaTwo = {
     age: 20,
     beltColour: "black"
 };
+var mixedTwo = [];
+mixed.push(5);
+mixed.push("mario");
+mixed.push(false);
+console.log(mixed);
+var ninja;
+ninja = { name: 'yoshi', age: 20 };
+console.log(ninja);
+ninja = { name: 25, age: "Yoshi" };
+console.log(ninja);

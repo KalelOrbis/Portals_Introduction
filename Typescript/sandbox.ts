@@ -34,3 +34,17 @@ ninjaTwo = {
     age: 20,
     beltColour: "black"
 };
+
+let mixedTwo: any[]=[];
+mixed.push(5);
+mixed.push("mario");
+mixed.push(false);
+console.log(mixed);
+
+let ninja: {name: any, age: any};
+
+ninja = {name: 'yoshi', age: 20};
+console.log(ninja);
+
+ninja = {name: 25, age: "Yoshi"};
+console.log(ninja);
