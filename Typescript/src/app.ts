@@ -1,3 +1,27 @@
+class Invoice {
+
+    constructor(
+        readonly client: string,
+        private details: string,
+        public amount: number
+    ){}
+
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`
+    }
+}
+
+const invOne = new Invoice("mario", "work on the mario website", 1242);
+const invTwo = new Invoice("mario", "work on the luigi website", 12525);
+
+let invoices: Invoice[] = [];
+invoices.push(invOne, invTwo);
+
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
+
+
 //! means there surely is an anchor tag
 const anchor = document.querySelector("a")!;
 
@@ -25,5 +49,4 @@ form.addEventListener('submit', (e: Event) => {
         logDetails.value,
         amount.valueAsNumber
     )
-
-})
+});
