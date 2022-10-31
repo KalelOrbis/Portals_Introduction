@@ -67,6 +67,14 @@ const minus = (a: number, b: number) : number => {
     return a - b;
 }
 
-let result = minus(10,3)
+let result = minus(10,3);
 
+type StringOrnUm = string | number;
+type objWithName = { name: string, uId: StringOrnUm}
 
+const logDetails = (uId: StringOrnUm, item: string) => {
+    console.log(`${item} has uId of ${uId}`);
+}
+const doGreet = (user: objWithName) => {
+    console.log(`${user.name} says hello`);
+}

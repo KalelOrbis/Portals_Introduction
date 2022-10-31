@@ -47,3 +47,9 @@ const minus = (a, b) => {
     return a - b;
 };
 let result = minus(10, 3);
+const logDetails = (uId, item) => {
+    console.log(`${item} has uId of ${uId}`);
+};
+const doGreet = (user) => {
+    console.log(`${user.name} says hello`);
+};
