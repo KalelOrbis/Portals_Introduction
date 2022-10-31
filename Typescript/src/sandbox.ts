@@ -48,3 +48,25 @@ console.log(ninja);
 
 ninja = {name: 25, age: "Yoshi"};
 console.log(ninja);
+
+let greet: Function = () => {
+    console.log('hello world');
+}
+
+// greet = 'hello';
+
+// ? makes parameters optional
+const add = (a: number, b: number, c: number | string = 10) : void => {
+    console.log(a + b);
+    console.log(c);
+}
+
+add(123,4123,20);
+
+const minus = (a: number, b: number) : number => {
+    return a - b;
+}
+
+let result = minus(10,3)
+
+
