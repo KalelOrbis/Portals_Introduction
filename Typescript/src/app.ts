@@ -1,4 +1,31 @@
-import { Invoice } from './classes/invoice.js';
+interface IsPerson{
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a:number): number;
+}
+
+const me: IsPerson = {
+    name: 'kalel',
+    age: 18,
+    speak(text: string): void {
+        console.log(text);
+    },
+    spend(amount: number) : number {
+        console.log('I spent', amount);
+        return amount;
+    }
+};
+
+let greetPerson = (person: IsPerson) => {
+    console.log('hello', person.name);
+}
+
+greetPerson(me);
+
+console.log(me);
+
+import { Invoice } from './classes/Invoice.js';
 
 const invOne = new Invoice("mario", "work on the mario website", 1242);
 const invTwo = new Invoice("mario", "work on the luigi website", 12525);
