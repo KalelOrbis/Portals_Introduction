@@ -1,4 +1,11 @@
-"use strict";
+import { Invoice } from './classes/invoice.js';
+const invOne = new Invoice("mario", "work on the mario website", 1242);
+const invTwo = new Invoice("mario", "work on the luigi website", 12525);
+let invoices = [];
+invoices.push(invOne, invTwo);
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
 //! means there surely is an anchor tag
 const anchor = document.querySelector("a");
 // if(anchor){
