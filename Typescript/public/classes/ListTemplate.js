@@ -10,6 +10,9 @@ export class ListTemplate {
     }
     render(item, heading, pos) {
         const li = document.createElement('li');
+        li.addEventListener('click', () => {
+            li.remove();
+        });
         const h4 = document.createElement("h4");
         h4.innerText = heading;
         li.append(h4);
