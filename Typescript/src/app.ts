@@ -77,22 +77,25 @@ let docOne = addUID({name: 'yoshi', age: 50});
 // let docTwo = addUID({name: ''});
 console.log(docOne.age);
 
+// ENUMS associate property with numeric value
+enum ResourceType {BOOK, AUTHOR, FILM, DIRECTOR, PERSON, OTHER};
+
 // generics with interfaces
 interface Resource<T>{
     uId: number;
-    resourceName: string;
+    resourceType: ResourceType;
     data: T;
 }
 
 const docThree: Resource<object> = {
     uId: 1,
-    resourceName: "Person",
+    resourceType: ResourceType.BOOK,
     data: {date: "31/10/2022"}
 }
 
 const docFour: Resource<string[]> = {
     uId: 2, 
-    resourceName: 'shoppingList',
+    resourceType: ResourceType.FILM,
     data: ["sdkjf","sdkjf","sldkgj"]
 }
 

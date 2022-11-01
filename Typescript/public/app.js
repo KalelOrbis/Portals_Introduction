@@ -53,14 +53,25 @@ const addUID = (obj) => {
 let docOne = addUID({ name: 'yoshi', age: 50 });
 // let docTwo = addUID({name: ''});
 console.log(docOne.age);
+// ENUMS associate property with numeric value
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+    ResourceType[ResourceType["OTHER"] = 5] = "OTHER";
+})(ResourceType || (ResourceType = {}));
+;
 const docThree = {
     uId: 1,
-    resourceName: "Person",
+    resourceType: ResourceType.BOOK,
     data: { date: "31/10/2022" }
 };
 const docFour = {
     uId: 2,
-    resourceName: 'shoppingList',
+    resourceType: ResourceType.FILM,
     data: ["sdkjf", "sdkjf", "sldkgj"]
 };
 console.log(docThree, docFour);
