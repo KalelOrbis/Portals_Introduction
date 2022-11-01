@@ -34,9 +34,14 @@ const ul = document.querySelector('ul');
 const list = new ListTemplate(ul);
 form.addEventListener('submit', (e) => {
     e.preventDefault(); //prevents page refreshing when form is submit
+    // tuple
+    let values;
+    values = [toFrom.value, logDetails.value, amount.valueAsNumber];
     let doc;
     if (type.value === 'invoice') {
-        doc = new Invoice(toFrom.value, logDetails.value, amount.valueAsNumber);
+        // three dots spread out the items inside the values array into singular parameters
+        // only works because the types are fix in the tuple
+        doc = new Invoice(...values);
     }
     else {
         doc = new Payment(toFrom.value, logDetails.value, amount.valueAsNumber);
@@ -75,3 +80,14 @@ const docFour = {
     data: ["sdkjf", "sdkjf", "sldkgj"]
 };
 console.log(docThree, docFour);
+// tuples fixate types of values stored like a row with columns 
+let arr = ['ryu', 234, true];
+arr[0] = false;
+arr[1] = 'yoshi';
+arr = [40, false, 'yoshi'];
+let tup = ['ryu', 234, true];
+tup[0] = 'ken';
+tup[1] = 30;
+let student;
+// student = [2432423, 'ken'];
+student = ['chun-li', 1242];
