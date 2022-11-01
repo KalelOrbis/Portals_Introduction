@@ -43,3 +43,24 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
+// DIDN'T COMPLETELY UNDERSTAND!!!
+// Capture Item that is passed as parameter and capture it's properties if its an object
+// only allows objects which have a name property
+const addUID = (obj) => {
+    let uId = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uId });
+};
+let docOne = addUID({ name: 'yoshi', age: 50 });
+// let docTwo = addUID({name: ''});
+console.log(docOne.age);
+const docThree = {
+    uId: 1,
+    resourceName: "Person",
+    data: { date: "31/10/2022" }
+};
+const docFour = {
+    uId: 2,
+    resourceName: 'shoppingList',
+    data: ["sdkjf", "sdkjf", "sldkgj"]
+};
+console.log(docThree, docFour);

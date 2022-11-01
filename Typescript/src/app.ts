@@ -63,3 +63,37 @@ form.addEventListener('submit', (e: Event) => {
 
     list.render(doc, type.value, 'end');
 });
+
+
+// DIDN'T COMPLETELY UNDERSTAND!!!
+// Capture Item that is passed as parameter and capture it's properties if its an object
+// only allows objects which have a name property
+const addUID = <T extends {name: string}>(obj: T) => {
+    let uId = Math.floor(Math.random() * 100);
+    return {...obj,uId};
+}
+
+let docOne = addUID({name: 'yoshi', age: 50});
+// let docTwo = addUID({name: ''});
+console.log(docOne.age);
+
+// generics with interfaces
+interface Resource<T>{
+    uId: number;
+    resourceName: string;
+    data: T;
+}
+
+const docThree: Resource<object> = {
+    uId: 1,
+    resourceName: "Person",
+    data: {date: "31/10/2022"}
+}
+
+const docFour: Resource<string[]> = {
+    uId: 2, 
+    resourceName: 'shoppingList',
+    data: ["sdkjf","sdkjf","sldkgj"]
+}
+
+console.log(docThree, docFour);
