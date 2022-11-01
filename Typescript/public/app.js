@@ -1,4 +1,5 @@
 import { Invoice } from './classes/Invoice.js';
+import { ListTemplate } from './classes/ListTemplate.js';
 import { Payment } from './classes/Payment.js';
 // // Makes sure that whaterver obj that is store inside doc implemts the interface
 // let docOne: HasFormatter;
@@ -28,6 +29,9 @@ const type = document.querySelector('#type');
 const toFrom = document.querySelector('#tofrom');
 const logDetails = document.querySelector('#details');
 const amount = document.querySelector('#amount');
+// list template instance
+const ul = document.querySelector('ul');
+const list = new ListTemplate(ul);
 form.addEventListener('submit', (e) => {
     e.preventDefault(); //prevents page refreshing when form is submit
     let doc;
@@ -37,5 +41,5 @@ form.addEventListener('submit', (e) => {
     else {
         doc = new Payment(toFrom.value, logDetails.value, amount.valueAsNumber);
     }
-    console.log(doc);
+    list.render(doc, type.value, 'end');
 });
