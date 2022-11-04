@@ -36,9 +36,12 @@ form.addEventListener('submit', (e) => {
     e.preventDefault(); //prevents page refreshing when form is submit
     // tuple
     let values;
+    if (toFrom.value === "" || logDetails.value === "" || Number.isNaN(amount.valueAsNumber)) {
+        return;
+    }
     values = [toFrom.value, logDetails.value, amount.valueAsNumber];
     let doc;
-    if (type.value === 'invoice') {
+    if (type.value === 'Invoice') {
         // three dots spread out the items inside the values array into singular parameters
         // only works because the types are fix in the tuple
         doc = new Invoice(...values);

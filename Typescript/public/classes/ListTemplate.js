@@ -15,6 +15,7 @@ export class ListTemplate {
         });
         const h4 = document.createElement("h4");
         h4.innerText = heading;
+        h4.classList.add('text-purple');
         li.append(h4);
         const p = document.createElement('p');
         p.innerText = item.format();

@@ -3,44 +3,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TypeScript Tutorial</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../css/index.css">
 </head>
 <body>
+    <nav class="navbar-primary space-between">
+        <h1 class="site-title text-white">Finance Logger</h1>
+        <a href="restaurantorders.html" class="btn-warning">Restaurant Orders</a>
+    </nav>
+    
+    <div class="bg-gray-light-7 pt-3 pb-3">
+        <div class="container">
+            <form class="new-item-form gap-2 display-f justify-center">
+                <div class="display-i-b ">
+                    <label class="display-b font-">Type:</label>
+                    <select id="type" class=" br">
+                        <option value="Invoice">Invoice</option>
+                        <option value="Payment">Payment</option>
+                    </select>
+                </div>
+                <div class="display-i-b">
+                    <label class="display-b">To / From:</label>
+                    <input type="text" class=" br" id="tofrom">
+                </div>
+                <div class="display-i-b">
+                    <label class="display-b">Details:</label>
+                    <input type="text" class=" br" id="details">
+                </div>
+                <div class="display-i-b">
+                    <label class="display-b">Amount ($):</label>
+                    <input type="number" class=" br" id="amount">
+                </div>
 
-    <div class="wrapper">
-        <h1>Finance Logger</h1>
+                <button class="btn-outlined-purple text-purple text-hover-white">Add</button>
+            </form>
+    
+            <a href="https://www.thenetninja.co.uk">The Net Ninja</a>
 
+        </div>
+           
+    </div>
+       
+    <div class="row justify-center mt-2">
         <!-- output list -->
         <ul class="item-list">
         </ul>
     </div>
 
-    <footer>
-        <form class="new-item-form">
-            <div class="field">
-                <label>Type:</label>
-                <select id="type">
-                    <option value="invoice">Invoice</option>
-                    <option value="payment">Payment</option>
-                </select>
-            </div>
-            <div class="field">
-                <label>To / From:</label>
-                <input type="text" id="tofrom">
-            </div>
-            <div class="field">
-                <label>Details:</label>
-                <input type="text" id="details">
-            </div>
-            <div class="field">
-                <label>Amount (�):</label>
-                <input type="number" id="amount">
-            </div>
-            <button>Add</button>
-        </form>
-
-        <a href="https://www.thenetninja.co.uk">The Net Ninja</a>
-    </footer>
 
     <script type="module" src='app.js'></script>
 </body>

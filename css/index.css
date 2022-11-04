@@ -95,43 +95,43 @@ img {
   }
 }
 .text-primary {
-  color: indigo;
+  color: #1ac886;
 }
 
 .bg-primary {
-  background-color: indigo;
+  background-color: #1ac886;
 }
 
 .bg-primary-light-2 {
-  background-color: #6f339b;
+  background-color: #48d39e;
 }
 
 .bg-primary-light-4 {
-  background-color: #9366b4;
+  background-color: #76deb6;
 }
 
 .bg-primary-light-6 {
-  background-color: #b799cd;
+  background-color: #a3e9cf;
 }
 
 .bg-primary-light-8 {
-  background-color: #dbcce6;
+  background-color: #d1f4e7;
 }
 
 .bg-primary-dark-2 {
-  background-color: #3c0068;
+  background-color: #15a06b;
 }
 
 .bg-primary-dark-4 {
-  background-color: #2d004e;
+  background-color: #107850;
 }
 
 .bg-primary-dark-6 {
-  background-color: #1e0034;
+  background-color: #0a5036;
 }
 
 .bg-primary-dark-8 {
-  background-color: #0f001a;
+  background-color: #05281b;
 }
 
 .text-secondary {
@@ -274,11 +274,11 @@ img {
   border: 0;
   padding: 1rem 2rem;
   border-radius: 20px;
-  background-color: indigo;
-  background-color: indigo;
+  background-color: #1ac886;
+  background-color: #1ac886;
 }
 .btn-primary:hover {
-  background-color: #5a009c;
+  background-color: #1ddf95;
 }
 
 .btn-complement-primary {
@@ -288,12 +288,12 @@ img {
   border: 0;
   padding: 1rem 2rem;
   border-radius: 20px;
-  background-color: indigo;
-  color: #7cff1c;
+  background-color: #1ac886;
+  color: #f08bb1;
 }
 .btn-complement-primary:hover {
-  color: indigo;
-  background-color: #7cff1c;
+  color: #1ac886;
+  background-color: #f08bb1;
 }
 
 .btn-secondary {
@@ -411,7 +411,7 @@ img {
   font-size: 1.5rem;
 }
 .navbar-primary {
-  background-color: indigo;
+  background-color: #1ac886;
 }
 
 .badge-orange {
@@ -482,8 +482,16 @@ img {
   border-radius: 20px;
 }
 
+.display-b {
+  display: block;
+}
+
 .display-f {
   display: flex;
+}
+
+.display-i-b {
+  display: inline-block;
 }
 
 .font-sm {
@@ -504,4 +512,18 @@ img {
 
 .font-xxl {
   font-size: 3rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #333;
+  margin: 16px 0 6px;
+}
+
+input, select {
+  padding: 6px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
 }

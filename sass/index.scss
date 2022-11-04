@@ -1,5 +1,17 @@
-$primary: indigo;
+$primary: #1ac886 ;
 $base-padding: 1rem;
 $base-border-thickness: 3px;
 @import 'shinigami';
 
+label{
+    display: block;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #333;
+    margin: 16px 0 6px;
+  }
+  input, select{
+    padding: 6px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+  }

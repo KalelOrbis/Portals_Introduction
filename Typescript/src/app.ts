@@ -52,11 +52,19 @@ form.addEventListener('submit', (e: Event) => {
     
     // tuple
     let values: [string, string, number];
+
+    if(toFrom.value === "" || logDetails.value === "" || Number.isNaN(amount.valueAsNumber) )
+    {
+        return;
+    }
+
     values = [toFrom.value, logDetails.value, amount.valueAsNumber];
-    
+
     let doc: HasFormatter;
+
     
-    if(type.value === 'invoice')
+    
+    if(type.value === 'Invoice')
     {
         // three dots spread out the items inside the values array into singular parameters
         // only works because the types are fix in the tuple

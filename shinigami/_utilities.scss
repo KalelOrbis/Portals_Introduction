@@ -158,7 +158,7 @@ $utilities: (
           "xl": $font-size-xl,
           "xxl": $font-size-xxl
         )
-      )
+      ),
 );
 
 @each $property, $map in $utilities 

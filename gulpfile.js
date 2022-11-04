@@ -6,12 +6,12 @@ function buildStyles() {
     // shinigami/**/ means any subfolder inside the shinigami folder 
   return src('sass/**/*.scss')
     .pipe(sass())
-    .pipe(purgecss({ content: ['*.html']}))
+    .pipe(purgecss({ content: ['**/*.html']}))
     .pipe(dest('css'))
 }
 
 function watchTask() {
-  watch(['sass/**/*.scss','*.html'], buildStyles)
+  watch(['sass/**/*.scss','**/*.html'], buildStyles)
 }
 
 exports.default = series(buildStyles, watchTask)
